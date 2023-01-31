@@ -5,7 +5,15 @@
 <title>Empleos</title>
 </head>
 <body>
+	<!-- 
 	<h1 th:text="${message}">Página principal de Empleos</h1>
 	<h2>Hoy es [[${fecha}]]</h2>
+	-->
+	<h1>Bienvenido al portal de Empleos</h1>
+	<h2>Oferta de trabajo</h2>
+	<h3 th:text="'Título: ' + ${name}"></h3>
+	<p th:text="'Salario: ' + ${salary}"></p>
+	<p th:text="'Fecha de Publicación: ' + ${pubDate}"></p>
+	<p th:text="'Vigente: ' + ${active}"></p>
 </body>
 </html>
