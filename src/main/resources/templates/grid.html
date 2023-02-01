@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Grilla de Empleos</title>
+</head>
+<body>
+<h1>Vacantes de Empleos</h1>
+<table style="width: 100%" border=2>
+	<tr>
+		<th>ID</th>
+		<th>Título</th>
+		<th>Descripción</th>
+		<th>Salario</th>
+		<th>Fecha de Publicación</th>
+		<th>Activo</th>
+	</tr>
+	<tr th:each="job:${jobs}">
+		<th th:text="${job.id}"></th>
+		<th th:text="${job.title}"></th>
+		<th th:text="${job.description}"></th>
+		<th th:text="${job.salary}"></th>
+		<th th:text="${job.postDate}"></th>
+		<th th:text="${job.active}"></th>
+	</tr>
+</table>
+
+</body>
+</html>
