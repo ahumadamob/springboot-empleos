@@ -1,6 +1,8 @@
 package com.ahumadamob.controller;
 
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,6 +10,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
+	
+	@GetMapping("/list")
+	public String showList(Model model) {
+		List<String> list = new LinkedList<String>();
+		
+		list.add("Ingeniero en sistemas");
+		list.add("Auxiliar contable");
+		list.add("Arquitecto");
+		list.add("Productor de seguros");
+		
+		model.addAttribute("list", list);
+		
+		return "list";
+	}
 	
 	@GetMapping("/")
 	public String showHome(Model model) {
